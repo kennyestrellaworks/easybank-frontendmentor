@@ -1,0 +1,34 @@
+{
+  "name": "easybank",
+  "version": "1.0.0",
+  "description": "Easybank Frontendmentor Challenge",
+  "browserslist": "last 10 versions",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "concat": "^1.0.3",
+    "html-minifier": "^4.0.0",
+    "live-server": "^1.2.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "sass": "^1.37.5",
+    "terser": "^5.7.1",
+    "uglifycss": "0.0.29"
+  },
+  "scripts": {
+    "watchSass": "sass --watch sass/main.scss:css/style.css",
+    "compileSass": "sass sass/main.scss:css/style.css",
+    "liveServer": "live-server",
+    "prefixCSS": "postcss css/style.css --use autoprefixer -o css/style.prefix.css",
+    "uglifyCSS": "uglifycss css/style.prefix.css --output _dist/css/style.css",
+    "minifyHTML": "html-minifier --output _dist/index.html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true index.html",
+    "minifyJS": "terser --compress toplevel,sequences=false --mangle js/script.js > _dist/js/script.js",
+    "startDev": "npm-run-all --parallel watchSass liveServer",
+    "buildDist": "npm-run-all compileSass prefixCSS uglifyCSS minifyHTML minifyJS"
+  },
+  "keywords": [],
+  "author": "Kenny A. Estrella",
+  "license": "ISC"
+}

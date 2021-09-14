@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 55.5%; // 10px/18px = 0.5555... * 100 = 55.555...
+}
+body {
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: $fontG1-Default;
+  //@include mediaQuery(viewport780) { overflow: hidden; }
+  ::selection {
+    background-color: $limeGreen;
+    color: $white;
+  }
+}
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}

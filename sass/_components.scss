@@ -1,0 +1,340 @@
+// Buttons ///////////
+.button__cta {
+  display: inline-block;
+  padding: 1.5rem 0 1.5rem 0;
+  &--primary {
+    position: relative;
+    background: linear-gradient(
+      45deg,
+      rgba($limeGreen, 1),
+      rgba($brightCyan, 1)
+    );
+    padding: 1.5rem 3.5rem;
+    border-radius: 5rem;
+    color: $white;
+    transition: background 1s;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 5rem;
+      background-color: $veryLightGray;
+      opacity: 0;
+      transition: $transitionDefault;
+    }
+    &:hover {
+      &::before {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+// Navigation links ///////////
+.nav-and-cta {  
+  width: 70%;
+  display: flex;
+  @include mediaQuery(viewport1199) { padding-right: 2rem; }
+  @include mediaQuery(viewport830) { width: 72% }
+  @include mediaQuery(viewport790) { width: 73% }
+  @include mediaQuery(viewport780) { 
+    left: 50%;
+    top: -30rem; 
+    transform: translate(-50%, 0);
+    width: 95%; 
+  }
+  justify-content: space-between;
+  &-as-dropdown {
+    //background-color: $white;
+    position: absolute;
+    left: 50%;
+    top: -30rem;
+    transform: translate(-50%, 0);
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 2rem;    
+    display: flex;
+    flex-direction: column;
+    transition: $transitionDefault;
+    z-index: 50;
+    &-show {
+      top: 9rem;
+    }
+    & .request-invite-cta {
+      text-align: center;
+      margin-top: 4rem;
+    }
+  }
+}
+.nav-default {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  &-as-dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 2rem;
+    background: #fff;
+    padding: 4rem 0;
+    border-radius: 1rem;
+    & .list-group {
+      display: flex;
+      flex-direction: column;
+      &-items {
+        list-style-type: none;
+        text-align: center;
+        &::before {
+          display: none;
+        }
+        &:not(:last-child) {
+          margin-bottom: 1.5rem;
+        }
+        &--active {
+          & a { color: $limeGreen; }        
+        } 
+      }
+      &-links {
+        font-size: $fontG1-Big;
+        color: $grayishBlue; 
+        transition: $transitionDefault;
+        &:hover {
+          color: $limeGreen;
+        }
+      }
+    } 
+  }
+  & .list-group {
+    display: flex;
+    &-items {
+      display: flex;
+      list-style-type: none;
+      position: relative;
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+      &::before {
+        content: "";
+        background: linear-gradient(
+          45deg,
+          rgba($limeGreen, 1),
+          rgba($brightCyan, 1)
+        );
+        position: absolute;
+        bottom: -18px;
+        height: 5px;
+        opacity: 0;
+        width: 100%;
+        transition: $transitionDefault;
+      }
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+      &--active {
+        & a { 
+          color: $darkBlue; 
+        } 
+        &::before {
+          content: "";
+          background: linear-gradient(
+            45deg,
+            rgba($limeGreen, 1),
+            rgba($brightCyan, 1)
+          );
+          position: absolute;
+          bottom: -18px;
+          height: 5px;
+          opacity: 1;
+          width: 100%;
+          transition: $transitionDefault;          
+        }
+      }
+    }
+    &-links {
+      display: flex;
+      color: $grayishBlue;
+      align-items: center;
+      font-size: $fontG1-Small;
+      transition: $transitionDefault;
+      &:hover {
+        color: $darkBlue;
+      }
+    }
+  }  
+}
+
+// Overlay  ///////////
+.header__overlay {
+  position: absolute;  
+  width: 100%; 
+  height: 0; 
+  background: linear-gradient($darkBlue, transparent);
+  transition: $transitionDefault;
+  &-show {
+    height: 100vh;
+  }
+}
+
+// Hamburger menu button ///////////
+.hamburger-menu {
+  display: none;
+  @include mediaQuery(viewport1199) { padding-right: 2rem;}
+  @include mediaQuery(viewport780) {
+    display: flex;
+    position: absolute;
+    z-index: 200;
+    right: 0;
+  }
+  &__link span {
+    display: block;
+    height: .2rem;
+    width: 3.6rem;
+    background-color: $darkBlue;
+    transform-origin: 3px 1px;
+    transition: $transitionDefault;
+    &:not(:last-child) { margin-bottom: .8rem; }    
+  }
+  &__link-clicked span {
+    &:nth-child(1) { transform: rotate(45deg); }
+    &:nth-child(2) { opacity: 0; }
+    &:nth-child(3) { transform: rotate(-45deg); }
+  }
+}
+
+// Heading ///////////
+
+// Heading default
+.heading-default {
+  &__title {
+    color: $darkBlue;
+    font-size: $fontG3-Smallest;
+    font-weight: 100;
+    @include mediaQuery(viewport370) { font-size: $fontG2-Larger; }
+  }
+  &__text {
+    margin: 2rem 0 4rem 0;
+    color: $grayishBlue;
+    font-size: $fontG1-Big;
+  }
+}
+// Heading smaller 
+.heading-smaller {
+  &__title {
+    color: $darkBlue;
+    font-size: $fontG2-Default;
+    font-weight: 100;
+    @include mediaQuery(viewport810) { text-align: center; }
+  }
+  &__text {
+    margin: 2rem 0 4rem 0;
+    color: $grayishBlue;
+    font-size: $fontG1-Big;
+    @include mediaQuery(viewport810) { text-align: center; }
+  }
+}
+
+// Columns ///////////
+.column-4 {
+  display: flex;
+  flex-wrap: wrap;
+  @include mediaQuery(viewport580) { 
+    margin: 0 auto; 
+    width: 80%;
+  }
+  &__child { 
+    width: 25%; 
+    @include mediaQuery(viewport900) { flex: 0 0 50%; }
+    @include mediaQuery(viewport580) { flex: 0 0 100%; }
+  } 
+}
+
+// Cards ///////////
+
+// Card Make 1
+.card-make-1 {
+  &__title {
+    font-weight: 100;
+    color: $darkBlue;
+    margin-top: 4rem;
+    @include mediaQuery(viewport810) { text-align: center; }
+  }
+  &__content {
+    padding: 2rem;
+  }  
+  &__paragraph {
+    margin-top: 2rem;
+    color: $grayishBlue;
+    line-height: 1.5;
+    @include mediaQuery(viewport810) { text-align: center; }
+  }
+  & .circle-icon {
+    @include mediaQuery(viewport810) { text-align: center; }
+  }
+}
+// Card Make 2
+.card-make-2-col-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+  @include mediaQuery(viewport900) { grid-template-columns: repeat(2, 1fr); }
+  @include mediaQuery(viewport580) { grid-template-columns: repeat(1, 1fr); }
+  &__as-link {
+    display: flex;
+    flex-direction: column;
+    border-radius: .8rem;    
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba($darkBlue, 0.1);
+    backface-visibility: hidden;
+    transition: $transitionDefault;
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+  &__image-feature {
+    width: 100%;
+    height: 22vh;
+    object-fit: cover;
+    @include mediaQuery(viewport1150) { height: 18vh; }
+    @include mediaQuery(viewport1080) { height: 17vh; }
+  }
+  &__text {
+    padding: 2rem;
+    margin-top: 1rem;
+    height: 25rem;
+    @include mediaQuery(viewport1060) { height: 28rem; }
+    @include mediaQuery(viewport1050) { height: 30rem; }
+    @include mediaQuery(viewport1000) { height: 31rem; }
+    @include mediaQuery(viewport910) { height: 32rem; }
+    @include mediaQuery(viewport900) { height: 23rem; }
+    @include mediaQuery(viewport750) { height: 24rem; }
+    @include mediaQuery(viewport720) { height: 25rem; }
+    @include mediaQuery(viewport580) { height: 17rem; }
+    @include mediaQuery(viewport500) { height: 20rem; }
+    @include mediaQuery(viewport470) { height: 22rem; }
+    @include mediaQuery(viewport400) { height: 24rem; }
+    @include mediaQuery(viewport330) { height: 26rem; }
+  }
+  &__title {
+    font-weight: 100;    
+    &-1 {
+      margin-top: 1rem;
+      font-size: $fontG1-Big;
+      color: $darkBlue;
+    }
+    &-2 {
+      font-size: $fontG1-Small;
+      color: $grayishBlue;
+    }
+  }
+  &__paragraph {
+    color: $grayishBlue;
+    line-height: 1.3;
+    margin-top: 1rem;
+    font-size: $fontG1-Small;
+  }
+}

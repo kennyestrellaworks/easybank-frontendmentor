@@ -1,0 +1,440 @@
+// Header
+.header {
+  position: fixed;
+  width: 100%;
+  height: 9rem;
+  box-shadow: 0px 0px 15px rgba($darkBlue, 0.1);
+  background-color: $white;
+  @include mediaQuery(viewport780) { box-shadow: none; }
+  z-index: 2000;  
+  &__container {
+    position: relative;
+    height: 100%;
+    background-color: $white;
+  }  
+  &__wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 900;
+    @include centerElement;
+    @include mediaQuery(viewport1199) {
+      //margin: 0 2rem 0 2rem;
+    }
+  }
+  &__logo {
+    width: 15%;
+    @include mediaQuery(viewport1199) { padding-left: 2rem; }
+    @include mediaQuery(viewport780) {
+      background-color: $white;
+      width: 100%;
+      height: 100%;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      box-shadow: 0px 0px 15px rgba($darkBlue, 0.1);
+    }
+  }
+}
+
+// Hero
+.hero {
+  position: relative;
+  height: 102rem;
+  width: 100%;
+  overflow: hidden;
+  @include mediaQuery(viewport780) { height: 127rem; }
+  @include mediaQuery(viewport760) { height: 123rem; }
+  @include mediaQuery(viewport740) { height: 121rem; }
+  @include mediaQuery(viewport720) { height: 118rem; }
+  @include mediaQuery(viewport700) { height: 116rem; }
+  @include mediaQuery(viewport690) { height: 114rem; }
+  @include mediaQuery(viewport660) { height: 112rem; }
+  @include mediaQuery(viewport640) { height: 110rem; }
+  @include mediaQuery(viewport620) { height: 109rem; }
+  @include mediaQuery(viewport580) { height: 107rem; }
+  @include mediaQuery(viewport560) { height: 102rem; }
+  @include mediaQuery(viewport550) { height: 100rem; }
+  @include mediaQuery(viewport520) { height: 98rem; }
+  @include mediaQuery(viewport490) { height: 95rem; }
+  @include mediaQuery(viewport480) { height: 94rem; }
+  @include mediaQuery(viewport460) { height: 92rem; }
+  @include mediaQuery(viewport400) { height: 89rem; }
+  @include mediaQuery(viewport390) { height: 96rem; }
+  @include mediaQuery(viewport370) { height: 97rem; }
+  @include mediaQuery(viewport360) { height: 100rem; }
+  &__container {
+    height: 85rem;
+    width: 100%;
+    background-color: $veryLightGray;
+    @include mediaQuery(viewport780) { height: 100%; }
+    span {
+      position: absolute;
+      background-color: $lightGrayishBlue;
+      width: 100%;
+      height: 5rem;
+      z-index: 110;
+      @include mediaQuery(viewport780) {
+        display: none;
+      }
+    }
+  }
+  &__wrap {
+    display: flex;
+    @include centerElement;
+  }
+  &__column {
+    display: flex;
+    @include mediaQuery(viewport780) {
+      flex-direction: column;
+    }
+    &-1 {      
+      display: flex;
+      align-items: center;
+      width: 40%;
+      @include mediaQuery(viewport780) {
+        order: 2;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+      & .heading-default {
+        @include mediaQuery(viewport1199) { padding-left: 2rem; }
+        @include mediaQuery(viewport780) {
+          padding: 0;
+          width: 64%;
+          margin-top: 7rem;
+        }        
+        @include mediaQuery(viewport760) { margin-top: 6rem; }
+        @include mediaQuery(viewport740) { margin-top: 5rem; }
+        @include mediaQuery(viewport720) { margin-top: 4rem; }
+        @include mediaQuery(viewport700) { margin-top: 3rem; }
+        @include mediaQuery(viewport690) { margin-top: 2rem; }
+        @include mediaQuery(viewport660) { margin-top: 0; }
+        @include mediaQuery(viewport560) { width: 88%; }
+        @include mediaQuery(viewport410) { width: 93%; }
+        @include mediaQuery(viewport390) { width: 92%; }
+        @include mediaQuery(viewport370) { width: 86%; }
+      }
+    }
+    &-2 {
+      width: 60%;
+      @include mediaQuery(viewport780) {
+        order: 1;
+        width: 100%;
+        height: 76rem;
+      }
+      @include mediaQuery(viewport760) { height: 75rem; }
+      @include mediaQuery(viewport740) { height: 74rem; }
+      @include mediaQuery(viewport720) { height: 73rem; }
+      @include mediaQuery(viewport700) { height: 72rem; }
+      @include mediaQuery(viewport640) { height: 69rem; }
+      @include mediaQuery(viewport620) { height: 68rem; }
+      @include mediaQuery(viewport600) { height: 66rem; }
+      @include mediaQuery(viewport580) { height: 64rem; }
+      @include mediaQuery(viewport560) { height: 62rem; }
+      @include mediaQuery(viewport550) { height: 61rem; }
+      @include mediaQuery(viewport540) { height: 60rem; }
+      @include mediaQuery(viewport520) { height: 58rem; }
+      @include mediaQuery(viewport500) { height: 57rem; }
+      @include mediaQuery(viewport490) { height: 55rem; }
+      @include mediaQuery(viewport480) { height: 54rem; }
+      @include mediaQuery(viewport460) { height: 53rem; }
+      @include mediaQuery(viewport450) { height: 52rem; }
+      @include mediaQuery(viewport440) { height: 50rem; }
+      @include mediaQuery(viewport400) { height: 47rem; }
+      @include mediaQuery(viewport360) { height: 45rem; }
+      @include mediaQuery(viewport340) { height: 44rem; }
+    }
+  }
+  &__images {
+    position: relative;
+    img {
+      position: absolute;
+    }
+    &-1 {
+      top: -188px;
+      left: -22px;
+      z-index: 100;
+      @include mediaQuery(viewport780) {
+        display: none;
+      }
+    }
+    &-1a {
+      display: none;
+      @include mediaQuery(viewport780) {
+        display: block;
+        width: 100%;
+        top: -28px;
+      }
+      @include mediaQuery(viewport760) { top: -26px; }
+      @include mediaQuery(viewport750) { top: -22px; }
+      @include mediaQuery(viewport740) { top: -25px; }
+      @include mediaQuery(viewport730) { top: -19px; }
+      @include mediaQuery(viewport720) { top: -18px; }
+      @include mediaQuery(viewport700) { top: -14px; }
+      @include mediaQuery(viewport650) { top: -10px; }
+      @include mediaQuery(viewport650) { top: -6px; }
+      @include mediaQuery(viewport610) { top: -2px; }
+      @include mediaQuery(viewport560) { top: 2px; }
+      @include mediaQuery(viewport530) { top: 7px; }
+      @include mediaQuery(viewport500) { top: 13px; }
+      @include mediaQuery(viewport460) { top: 16px; }
+      @include mediaQuery(viewport440) { top: 21px; }
+      @include mediaQuery(viewport390) { top: 28px; }
+      @include mediaQuery(viewport340) { top: 35px; }
+    }
+    &-2 {
+      top: -46px;
+      left: 178px;
+      z-index: 150;
+      @include mediaQuery(viewport780) {
+        top: -178px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 95%;
+      }
+      @include mediaQuery(viewport770) { top: -175px; }
+      @include mediaQuery(viewport760) { top: -170px; }
+      @include mediaQuery(viewport750) { top: -166px; }
+      @include mediaQuery(viewport740) { top: -164px; }
+      @include mediaQuery(viewport730) { top: -158px; }
+      @include mediaQuery(viewport720) { top: -156px; }
+      @include mediaQuery(viewport710) { top: -152px; }
+      @include mediaQuery(viewport700) { top: -148px; }
+      @include mediaQuery(viewport690) { top: -145px; }
+      @include mediaQuery(viewport680) { top: -141px; }
+      @include mediaQuery(viewport670) { top: -138px; }
+      @include mediaQuery(viewport660) { top: -135px; }
+      @include mediaQuery(viewport650) { top: -131px; }
+      @include mediaQuery(viewport640) { top: -128px; }
+      @include mediaQuery(viewport630) { top: -124px; }
+      @include mediaQuery(viewport620) { top: -120px; }
+      @include mediaQuery(viewport610) { top: -116px; }
+      @include mediaQuery(viewport600) { top: -113px; }
+      @include mediaQuery(viewport590) { top: -110px; }
+      @include mediaQuery(viewport580) { top: -107px; }
+      @include mediaQuery(viewport570) { top: -104px; }
+      @include mediaQuery(viewport560) { top: -100px; }
+      @include mediaQuery(viewport550) { top: -97px; }
+      @include mediaQuery(viewport540) { top: -94px; }
+      @include mediaQuery(viewport530) { top: -91px; }
+      @include mediaQuery(viewport520) { top: -87px; }
+      @include mediaQuery(viewport510) { top: -83px; }
+      @include mediaQuery(viewport500) { top: -80px; }
+      @include mediaQuery(viewport490) { top: -77px; }
+      @include mediaQuery(viewport480) { top: -73px; }
+      @include mediaQuery(viewport470) { top: -71px; }
+      @include mediaQuery(viewport460) { top: -67px; }
+      @include mediaQuery(viewport450) { top: -64px; }
+      @include mediaQuery(viewport440) { top: -61px; }
+      @include mediaQuery(viewport430) { top: -57px; }
+      @include mediaQuery(viewport420) { top: -54px; }
+      @include mediaQuery(viewport410) { top: -51px; }
+      @include mediaQuery(viewport400) { top: -47px; }
+      @include mediaQuery(viewport390) { top: -44px; }
+      @include mediaQuery(viewport380) { top: -40px; }
+      @include mediaQuery(viewport370) { top: -37px; }
+      @include mediaQuery(viewport360) { top: -33px; }
+      @include mediaQuery(viewport350) { top: -30px; }
+      @include mediaQuery(viewport340) { top: -27px; }
+      @include mediaQuery(viewport330) { top: -24px; }
+      @include mediaQuery(viewport320) { top: -20px; }
+    }
+  }
+}
+
+// Why Choose Easy Bank
+.value-prop {
+  position: relative;
+  background-color: $lightGrayishBlue;
+  z-index: 140;
+  margin-top: -17rem;
+  @include mediaQuery(viewport780) {
+    margin-top: 0;
+  }
+  &__wrap {
+    @include centerElement;
+  }
+  &__container {
+    padding: 10rem 0 10rem 0;
+  }
+  &__content {
+    margin-top: 8rem;
+  }
+  &__heading {
+    width: 100%;
+    & .heading-smaller {
+      width: 62%;
+      @include mediaQuery(viewport1199) { padding-left: 2rem; }
+      @include mediaQuery(viewport810) { margin: 0 auto; }
+    }
+  }
+}
+
+// Latest Articles
+.latest-articles {
+  position: relative;
+  background-color: $veryLightGray;
+  &__wrap {
+    @include centerElement;
+  }
+  &__container {
+    padding: 10rem 0 10rem 0;
+    @include mediaQuery(viewport1199) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    @include mediaQuery(viewport1150) {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+    @include mediaQuery(viewport1130) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+    @include mediaQuery(viewport1120) {
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
+    }
+  }
+  &__content {
+    margin-top: 4rem;    
+  }
+}
+
+// Footer
+.footer {
+  position: relative;
+  background-color: $darkBlue;
+  &__wrap {
+    @include centerElement;
+    @include mediaQuery(viewport920) { height: 32rem; }
+    @include mediaQuery(viewport600) { height: 39rem; }
+    @include mediaQuery(viewport520) { height: 100%; }
+  }
+  &__container {
+    padding: 6rem 0 6rem 0;
+    @include mediaQuery(viewport1180) { 
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    @include mediaQuery(viewport1170) { 
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+  &__column {
+    display: flex;
+    align-items: center;
+    @include mediaQuery(viewport920) { 
+      display: block;
+      position: relative;  
+    }
+    &-1 {
+      width: 25%;
+      @include mediaQuery(viewport1200) { width: 33.333%; }
+      @include mediaQuery(viewport920) { 
+        width: 100%; 
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 6rem;
+      }
+      @include mediaQuery(viewport520) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4rem;
+      }
+    }
+    &-2 {
+      width: 40%;
+      @include mediaQuery(viewport1200) { width: 33.333%; }
+      @include mediaQuery(viewport920) { 
+        width: 50%; 
+        position: absolute;
+        left: 0;
+      }
+      @include mediaQuery(viewport600) { 
+        width: 100%;
+        position: relative;
+      }
+    }
+    &-3 {
+      width: 35%;      
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      @include mediaQuery(viewport1200) { width: 33.333%; }
+      @include mediaQuery(viewport920) { 
+        width: 50%; 
+        position: absolute;
+        right: 0;
+      }
+      @include mediaQuery(viewport600) { 
+        width: 100%;
+        position: relative;
+        margin-top: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      @include mediaQuery(viewport520) {
+        margin-top: 4rem;
+      }
+    }
+  }
+  &__social-links {
+    margin-top: 5rem;
+    @include mediaQuery(viewport920) { margin: 0; }
+    @include mediaQuery(viewport520) { margin: 2rem 0 0 0; }
+    &-item {
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+      & svg path {
+        fill: $white;
+        transition: $transitionDefault;
+      }
+      &:hover svg path {
+        fill: $limeGreen;
+      }
+    }
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 11rem;
+    @include mediaQuery(viewport600) { 
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: inherit;
+    }
+    @include mediaQuery(viewport520) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: inherit;
+    }
+    &-item {
+      color: $white;
+      margin: 0.5rem 0 0.5rem 0;
+      transition: $transitionDefault;
+      &:not(:last-child) {
+        @include mediaQuery(viewport600) { margin-right: 1.5rem; }
+        @include mediaQuery(viewport520) { margin-right: 0; }
+      }
+      &:hover {
+        color: $limeGreen;
+      }
+    }
+  }
+  &__copy {
+    color: $grayishBlue;
+    margin-top: 1rem;
+  }
+}
