@@ -24,10 +24,7 @@ Users should be able to:
 
 ![](solution-preview.jpg)
 
-### Links
-
-- Solution URL: [Source Code](https://www.frontendmentor.io/solutions/html-5-css-javascript-filezilla-hostinger-nDihX7cKd)
-- Live Site URL: [Live Demo](http://jklmthreads.com/coding-projects/easybank-frontendmentor/)
+Live Site URL: [Live Demo](https://app.netlify.com/sites/kennyestrella-easybank-frontendmentor/overview)
 
 ## My process
 
