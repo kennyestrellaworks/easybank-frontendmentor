@@ -1,6 +1,7 @@
 /node_modules
+/.vscode
+/_dist
 index1.html
 notes.txt
 package-list.txt
-/.vscode
 solution-preview.psd

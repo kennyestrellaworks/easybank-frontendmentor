@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Source Code](https://github.com/kennyestrellaworks/easybank-frontendmentor)
+- Solution URL: [Source Code](https://www.frontendmentor.io/solutions/html-5-css-javascript-filezilla-hostinger-nDihX7cKd)
 - Live Site URL: [Live Demo](http://jklmthreads.com/coding-projects/easybank-frontendmentor/)
 
 ## My process
