@@ -24,7 +24,7 @@ Users should be able to:
 
 ![](solution-preview.jpg)
 
-Live Site URL: [Live Demo](https://app.netlify.com/sites/kennyestrella-easybank-frontendmentor/overview)
+Live Site URL: [Live Demo](https://kennyestrella-easybank-frontendmentor.netlify.app/)
 
 ## My process
 
