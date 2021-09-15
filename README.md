@@ -21,6 +21,7 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 
 ### Screenshot
+<br />
 
 ![](solution-preview.jpg)
 
@@ -28,12 +29,5 @@ Live Site URL: [Live Demo](https://kennyestrella-easybank-frontendmentor.netlify
 
 Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/html-5-css-javascript-filezilla-hostinger-nDihX7cKd)
 
-## My process
-
-### Built with
-
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Vanilla JavaScript
+### Used technologies
+<img width="22px" src="html5-plain.svg"> <img width="22px" src="sass-original.svg"> <img width="22px" src="javascript-original.svg"> <img width="22px" src="npm-original-wordmark.svg">
