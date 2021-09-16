@@ -18,13 +18,12 @@
   },
   "scripts": {
     "watchSass": "sass --watch sass/main.scss:css/style.css",
-    "compileSass": "sass sass/main.scss:css/style.css",
     "liveServer": "live-server",
     "prefixCSS": "postcss css/style.css --use autoprefixer -o css/style.prefix.css",
     "uglifyCSS": "uglifycss css/style.prefix.css --output _dist/css/style.css",
     "minifyHTML": "html-minifier --output _dist/index.html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true index.html",
     "startDev": "npm-run-all --parallel watchSass liveServer",
-    "buildDist": "npm-run-all compileSass prefixCSS uglifyCSS minifyHTML"
+    "buildDist": "npm-run-all prefixCSS uglifyCSS minifyHTML"
   },
   "keywords": [],
   "author": "Kenny A. Estrella",
