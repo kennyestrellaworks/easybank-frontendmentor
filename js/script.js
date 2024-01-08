@@ -159,8 +159,7 @@ class UI {
 // By clicking it again, they are hidden.
 DOMStrings.hamburgerMenu.addEventListener('click', function() {
     DOMStrings.hamburgerMenu.classList.toggle('hamburger-menu__link-clicked')
-    if (DOMStrings.hamburgerMenu.classList.contains('hamburger-menu__link-clicked')) { UI.toggleClasses() } 
-    else { UI.toggleClasses() }
+    UI.toggleClasses()
 })
 
 // Window resize to detect width of the browser where if it is greater
